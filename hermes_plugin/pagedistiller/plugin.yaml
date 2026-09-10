@@ -1,0 +1,11 @@
+name: pagedistiller
+version: 0.1.0
+description: >-
+  PageDistiller — local, dependency-light URL extraction (httpx fetch +
+  trafilatura distill, with a nodriver/Chromium JS-render fallback that can
+  wait out bot challenges). No third-party extraction API, no API key.
+  Extract-only.
+author: Nacho (Ignacio) Solis
+kind: backend
+provides_web_providers:
+  - pagedistiller

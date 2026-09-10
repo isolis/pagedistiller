@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pagedistiller"
+version = "0.1.0"
+description = "Local, dependency-light web page distillation without external extraction APIs"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+      {name = "Nacho (Ignacio) Solis", email = "isolis@igso.net"},
+]
+dependencies = [
+    "httpx>=0.28,<1",
+    "trafilatura>=2.2,<3",
+    "nodriver>=0.50,<1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=9,<10",
+]
+
+[project.scripts]
+pagedistiller = "pagedistiller.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pagedistiller*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
